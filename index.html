@@ -126,7 +126,6 @@
             food.x = Math.floor(Math.random() * tileCount);
             food.y = Math.floor(Math.random() * tileCount);
             
-            // Make sure food doesn't spawn on snake
             for (let segment of snake) {
                 if (food.x === segment.x && food.y === segment.y) {
                     generateFood();
@@ -156,8 +155,6 @@
             scoreElement.textContent = 'Score: 0';
             gameLoop();
         }
-        
-        // Start the game
         gameLoop();
     </script>
 </body>
